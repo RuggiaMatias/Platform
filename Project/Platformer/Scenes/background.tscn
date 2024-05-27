@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl5uhi5seh3ty"]
+
+[ext_resource type="Texture2D" uid="uid://c60eor4fyvoqk" path="res://Assets/8645906.jpg" id="1_g1srt"]
+
+[node name="Background" type="CanvasLayer"]
+follow_viewport_enabled = true
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -760.0
+offset_top = -8211.0
+offset_right = 760.0
+offset_bottom = -6931.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_g1srt")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -760.0
+offset_top = -6310.0
+offset_right = 760.0
+offset_bottom = -5030.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_g1srt")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -760.0
+offset_top = -4404.0
+offset_right = 760.0
+offset_bottom = -3124.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_g1srt")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -760.0
+offset_top = -2522.0
+offset_right = 760.0
+offset_bottom = -1242.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_g1srt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_g1srt")

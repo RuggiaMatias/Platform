@@ -1,0 +1,150 @@
+[gd_scene load_steps=8 format=3 uid="uid://df0yamykki0l3"]
+
+[ext_resource type="Texture2D" uid="uid://dn4rjhsv3poim" path="res://Assets/UIPlatformer.png" id="1_bjb5v"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_ne5ym"]
+[ext_resource type="FontFile" uid="uid://doevfc6yuy3ss" path="res://Assets/Kenney Mini Square.ttf" id="2_y1emm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tme58"]
+atlas = ExtResource("1_bjb5v")
+region = Rect2(16, 48, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7uva"]
+atlas = ExtResource("1_bjb5v")
+region = Rect2(32, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tg33"]
+atlas = ExtResource("1_bjb5v")
+region = Rect2(65, 17, 30, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ke7u"]
+atlas = ExtResource("1_bjb5v")
+region = Rect2(33, 1, 62, 14)
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_ne5ym")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -200.0
+offset_right = 240.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("AtlasTexture_tme58")
+
+[node name="GridContainer" type="ReferenceRect" parent="TextureRect"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -163.0
+offset_right = 225.0
+offset_bottom = 163.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0, 0, 0, 1)
+border_width = 0.0
+
+[node name="PlayButton" type="TextureButton" parent="TextureRect/GridContainer"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.54
+anchor_right = 0.5
+anchor_bottom = 0.54
+offset_left = -54.0
+offset_top = -27.04
+offset_right = 54.0
+offset_bottom = 26.96
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_x7uva")
+texture_pressed = SubResource("AtlasTexture_5tg33")
+stretch_mode = 0
+
+[node name="ButtonLabel" type="Label" parent="TextureRect/GridContainer/PlayButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.0
+offset_right = 20.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PLAY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/GridContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.175
+anchor_right = 0.5
+anchor_bottom = 0.175
+offset_left = -150.0
+offset_top = -34.05
+offset_right = 150.0
+offset_bottom = 33.95
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+texture = SubResource("AtlasTexture_0ke7u")
+
+[node name="TextLabel" type="Label" parent="TextureRect/GridContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = -36.0
+offset_right = -43.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+text = "PLATFORM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Credits" type="Label" parent="TextureRect/GridContainer"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 22.0
+offset_top = 226.0
+offset_right = 278.0
+offset_bottom = 338.0
+theme_override_colors/font_color = Color(0.00392157, 0.54902, 0.811765, 1)
+theme_override_fonts/font = ExtResource("2_y1emm")
+theme_override_font_sizes/font_size = 16
+text = "Credits
+Game made by Ruggia Matias
+Sounds made by www.kenney.nl
+Fonts by www.kenney.nl
+Music made by Ruggia Matias"
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureRect/GridContainer/PlayButton" to="." method="_on_play_button_pressed"]

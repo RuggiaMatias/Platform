@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6n7jny0f6unb"]
+
+[ext_resource type="Texture2D" uid="uid://dn4rjhsv3poim" path="res://Assets/UIPlatformer.png" id="1_12c0a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4odp"]
+atlas = ExtResource("1_12c0a")
+region = Rect2(33, 1, 62, 14)
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="ScoreRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 42.0
+offset_top = 36.0
+offset_right = 104.0
+offset_bottom = 50.0
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_f4odp")
+
+[node name="ScoreLabel" type="Label" parent="ScoreRect"]
+texture_filter = 1
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 46.0
+offset_bottom = 22.0
+theme_override_font_sizes/font_size = 8
+text = "Score: "
